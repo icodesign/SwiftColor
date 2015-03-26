@@ -10,17 +10,17 @@ import UIKit
 
 public typealias Color = UIColor
 
-extension Color {
+public extension Color {
     
-    convenience init(_ hexString: String) {
+    public convenience init(_ hexString: String) {
         self.init(hexString: hexString, alpha: 1.0)
     }
     
-    convenience init(hexInt: Int, alpha: Float = 1.0) {
+    public convenience init(hexInt: Int, alpha: Float = 1.0) {
         self.init(hexString: NSString(format: "%2X", hexInt) as String, alpha: alpha)
     }
     
-    convenience init(hexString: String, alpha: Float = 1.0) {
+    public convenience init(hexString: String, alpha: Float = 1.0) {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
@@ -61,27 +61,27 @@ extension Color {
         self.init(red: red, green: green, blue: blue, alpha: mAlpha)
     }
     
-    func alpha(value: Float) -> Color {
+    public func alpha(value: Float) -> Color {
         var (red, green, blue, alpha) = getColorComponents()
         return Color(red: red, green: green, blue: blue, alpha: CGFloat(value))
     }
     
-    func red(value: Int) -> Color {
+    public func red(value: Int) -> Color {
         var (red, green, blue, alpha) = getColorComponents()
         return Color(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
     }
     
-    func green(value: Int) -> Color {
+    public func green(value: Int) -> Color {
         var (red, green, blue, alpha) = getColorComponents()
         return Color(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
     }
     
-    func blue(value: Int) -> Color {
+    public func blue(value: Int) -> Color {
         var (red, green, blue, alpha) = getColorComponents()
         return Color(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
     }
     
-    func getColorComponents() -> (CGFloat, CGFloat, CGFloat, CGFloat) {
+    public func getColorComponents() -> (CGFloat, CGFloat, CGFloat, CGFloat) {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0
@@ -92,7 +92,7 @@ extension Color {
     
 }
 
-extension Color {
+public extension Color {
     
     public class var black: Color {
         return self.blackColor()
@@ -156,17 +156,17 @@ extension Color {
     
 }
 
-extension String {
+public extension String {
     
-    var color: Color {
+    public var color: Color {
         return Color(hexString: self)
     }
     
 }
 
-extension Int {
+public extension Int {
     
-    var color: Color {
+    public var color: Color {
         return Color(hexInt: self)
     }
     
