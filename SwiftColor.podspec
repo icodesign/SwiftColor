@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "SwiftColors"
+  s.name         = "SwiftColor"
   s.version      = "0.1"
   s.summary      = "Swift PullToRefresh && InfiniteScrolling"
   s.homepage     = "https://github.com/iCodesign/SwiftColor"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/iCodesign/SwiftColor.git", :tag => s.version }
 
-  s.source_files  = "SwiftColors", "SwiftColors/**/*.{swift}"
+  s.source_files  = "SwiftColor", "SwiftColor/**/*.{swift}"
 
   s.requires_arc = true
 
