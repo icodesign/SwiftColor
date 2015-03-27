@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftColor"
-  s.version      = "0.1"
+  s.version      = "0.3.0"
   s.summary      = "Swift PullToRefresh && InfiniteScrolling"
   s.homepage     = "https://github.com/iCodesign/SwiftColor"
   s.license      = "MIT"

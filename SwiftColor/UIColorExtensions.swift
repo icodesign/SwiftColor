@@ -10,6 +10,15 @@ import UIKit
 
 public typealias Color = UIColor
 
+public func ==(lhs: Color, rhs: Color) -> Bool{
+    var (lRed, lGreen, lBlue, lAlpha) = lhs.getColorComponents()
+    var (rRed, rGreen, rBlue, rAlpha) = rhs.getColorComponents()
+    return fabsf(Float(lRed - rRed)) < FLT_EPSILON
+        && fabsf(Float(lGreen - rGreen)) < FLT_EPSILON
+        && fabsf(Float(lBlue - rBlue)) < FLT_EPSILON
+        && fabsf(Float(lAlpha - rAlpha)) < FLT_EPSILON
+}
+
 public extension Color {
     
     public convenience init(_ hexString: String) {
@@ -25,18 +34,21 @@ public extension Color {
         var green: CGFloat = 0
         var blue: CGFloat = 0
         var mAlpha: CGFloat = CGFloat(alpha)
+        var minusLength = 0
         
         let scanner = NSScanner(string: hexString)
         
         if hexString.hasPrefix("#") {
             scanner.scanLocation = 1
+            minusLength = 1
         }
         if hexString.hasPrefix("0x") {
             scanner.scanLocation = 2
+            minusLength = 2
         }
         var hexValue: UInt64 = 0
         scanner.scanHexLongLong(&hexValue)
-        switch count(hexString) {
+        switch count(hexString) - minusLength {
         case 3:
             red = CGFloat((hexValue & 0xF00) >> 8) / 15.0
             green = CGFloat((hexValue & 0x0F0) >> 4) / 15.0
@@ -54,7 +66,7 @@ public extension Color {
             red = CGFloat((hexValue & 0xFF000000) >> 24) / 255.0
             green = CGFloat((hexValue & 0x00FF0000) >> 16) / 255.0
             blue = CGFloat((hexValue & 0x0000FF00) >> 8) / 255.0
-            mAlpha = CGFloat(hexValue & 0x000000FF) / 15.0
+            mAlpha = CGFloat(hexValue & 0x000000FF) / 255.0
         default:
             break
         }
