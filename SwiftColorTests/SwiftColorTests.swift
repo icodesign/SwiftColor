@@ -37,9 +37,7 @@ class SwiftColorsTests: XCTestCase {
         XCTAssert(color == Color(hexString: "4DA2D9CC"), "Pass")
         XCTAssert(color == Color(hexString: "#4DA2D9CC"), "Pass")
         XCTAssert(color == Color(hexString: "0x4DA2D9CC"), "Pass")
-        
-        println(Color(hexString: "0x4DA2D9", alpha: 0.8).getColorComponents())
-        
+                
         XCTAssert(color == Color(hexString: "0x4DA2D9", alpha: 0.8), "Pass")
     }
     

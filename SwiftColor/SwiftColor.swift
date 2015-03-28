@@ -11,8 +11,8 @@ import UIKit
 public typealias Color = UIColor
 
 public func ==(lhs: Color, rhs: Color) -> Bool{
-    var (lRed, lGreen, lBlue, lAlpha) = lhs.getColorComponents()
-    var (rRed, rGreen, rBlue, rAlpha) = rhs.getColorComponents()
+    var (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
+    var (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
     return fabsf(Float(lRed - rRed)) < FLT_EPSILON
         && fabsf(Float(lGreen - rGreen)) < FLT_EPSILON
         && fabsf(Float(lBlue - rBlue)) < FLT_EPSILON
@@ -74,26 +74,26 @@ public extension Color {
     }
     
     public func alpha(value: Float) -> Color {
-        var (red, green, blue, alpha) = getColorComponents()
+        var (red, green, blue, alpha) = colorComponents()
         return Color(red: red, green: green, blue: blue, alpha: CGFloat(value))
     }
     
     public func red(value: Int) -> Color {
-        var (red, green, blue, alpha) = getColorComponents()
+        var (red, green, blue, alpha) = colorComponents()
         return Color(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
     }
     
     public func green(value: Int) -> Color {
-        var (red, green, blue, alpha) = getColorComponents()
+        var (red, green, blue, alpha) = colorComponents()
         return Color(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
     }
     
     public func blue(value: Int) -> Color {
-        var (red, green, blue, alpha) = getColorComponents()
+        var (red, green, blue, alpha) = colorComponents()
         return Color(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
     }
     
-    public func getColorComponents() -> (CGFloat, CGFloat, CGFloat, CGFloat) {
+    public func colorComponents() -> (CGFloat, CGFloat, CGFloat, CGFloat) {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0

@@ -10,7 +10,7 @@
 		9BDF39441AC441EE00F0E330 /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BDF394A1AC441EE00F0E330 /* SwiftColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BDF393E1AC441EE00F0E330 /* SwiftColor.framework */; };
 		9BDF39511AC441EE00F0E330 /* SwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF39501AC441EE00F0E330 /* SwiftColorTests.swift */; };
-		9BDF395B1AC4422800F0E330 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* UIColorExtensions.swift */; };
+		9BDF395B1AC4422800F0E330 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 		9BDF39491AC441EE00F0E330 /* SwiftColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDF394F1AC441EE00F0E330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BDF39501AC441EE00F0E330 /* SwiftColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColorTests.swift; sourceTree = "<group>"; };
-		9BDF395A1AC4422800F0E330 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		9BDF395A1AC4422800F0E330 /* SwiftColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				9BDF39431AC441EE00F0E330 /* SwiftColor.h */,
-				9BDF395A1AC4422800F0E330 /* UIColorExtensions.swift */,
+				9BDF395A1AC4422800F0E330 /* SwiftColor.swift */,
 				9BDF39411AC441EE00F0E330 /* Supporting Files */,
 			);
 			path = SwiftColor;
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDF395B1AC4422800F0E330 /* UIColorExtensions.swift in Sources */,
+				9BDF395B1AC4422800F0E330 /* SwiftColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
