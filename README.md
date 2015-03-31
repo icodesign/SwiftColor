@@ -15,7 +15,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'SwiftColor', '~> 0.3.1'
+pod 'SwiftColor'
 ```
 
 ### Carthage
@@ -23,7 +23,7 @@ pod 'SwiftColor', '~> 0.3.1'
 To integrate ```SwiftColor``` into your Xcode project using Carthage, specify it in your ```Cartfile```:
 
 ```
-github "iCodesign/SwiftColor" >= 0.3.1
+github "iCodesign/SwiftColor"
 ```
 
 ### Manually
