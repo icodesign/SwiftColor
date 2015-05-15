@@ -34,7 +34,7 @@ You can also integrate ```SwiftColor``` directly with souce code. Clone the repo
 
 ### Color Init
 
-> ```SwiftColor``` provides a typealias for ```UIColor``` as ```Color```.
+> ```SwiftColor``` provides a typealias for ```UIColor```/`NSColor` as ```Color```.
 
 #### Hex String Init
 
