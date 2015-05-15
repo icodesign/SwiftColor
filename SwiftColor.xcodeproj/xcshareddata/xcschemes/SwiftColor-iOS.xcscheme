@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9BDF393D1AC441EE00F0E330"
                BuildableName = "SwiftColor.framework"
-               BlueprintName = "SwiftColor"
+               BlueprintName = "SwiftColor-iOS"
                ReferencedContainer = "container:SwiftColor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,7 +44,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BDF393D1AC441EE00F0E330"
             BuildableName = "SwiftColor.framework"
-            BlueprintName = "SwiftColor"
+            BlueprintName = "SwiftColor-iOS"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,7 +62,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9BDF393D1AC441EE00F0E330"
             BuildableName = "SwiftColor.framework"
-            BlueprintName = "SwiftColor"
+            BlueprintName = "SwiftColor-iOS"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

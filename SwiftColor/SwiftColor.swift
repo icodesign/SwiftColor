@@ -6,9 +6,13 @@
 //  Copyright (c) 2015 TouchingApp. All rights reserved.
 //
 
-import UIKit
-
-public typealias Color = UIColor
+#if os(iOS)
+    import UIKit
+    public typealias Color = UIColor
+#elseif os(OSX)
+    import Cocoa
+    public typealias Color = NSColor
+#endif
 
 public func ==(lhs: Color, rhs: Color) -> Bool{
     var (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
@@ -26,7 +30,17 @@ public extension Color {
     }
     
     public convenience init(hexInt: Int, alpha: Float = 1.0) {
-        self.init(hexString: NSString(format: "%2X", hexInt) as String, alpha: alpha)
+        var hexString = NSString(format: "%0X", hexInt)
+        if hexInt <= 0xfff {
+            hexString = NSString(format: "%03X", hexInt)
+        }else if hexInt <= 0xffff {
+            hexString = NSString(format: "%04X", hexInt)
+        }else if hexInt <= 0xffffff {
+            hexString = NSString(format: "%06X", hexInt)
+        }else if hexInt <= 0xffffffff {
+            hexString = NSString(format: "%08X", hexInt)
+        }
+        self.init(hexString: hexString as String, alpha: alpha)
     }
     
     public convenience init(hexString: String, alpha: Float = 1.0) {
@@ -98,7 +112,11 @@ public extension Color {
         var green: CGFloat = 0
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
-        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        #if os(iOS)
+            self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        #elseif os(OSX)
+            self.colorUsingColorSpaceName(NSCalibratedRGBColorSpace)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        #endif
         return (red, green, blue, alpha)
     }
     

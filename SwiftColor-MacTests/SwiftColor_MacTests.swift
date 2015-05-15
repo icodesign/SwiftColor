@@ -1,19 +1,19 @@
 //
-//  SwiftColorsTests.swift
-//  SwiftColorsTests
+//  SwiftColor_MacTests.swift
+//  SwiftColor-MacTests
 //
-//  Created by LEI on 3/26/15.
+//  Created by LEI on 5/15/15.
 //  Copyright (c) 2015 TouchingApp. All rights reserved.
 //
 
-import UIKit
+import Cocoa
 import XCTest
 import SwiftColor
 
-class SwiftColorsTests: XCTestCase {
+class SwiftColor_MacTests: XCTestCase {
     
-    let color = UIColor(red: 77/255.0, green: 162/255.0, blue: 217/255.0, alpha: 0.8)
-
+    let color = NSColor(red: 77/255.0, green: 162/255.0, blue: 217/255.0, alpha: 0.8)
+    
     
     override func setUp() {
         super.setUp()
@@ -27,50 +27,28 @@ class SwiftColorsTests: XCTestCase {
     
     func testHexStringInit() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.blackColor() == Color(hexString: "000"), "Pass")
-        XCTAssert(UIColor.blackColor() == Color(hexString: "#000"), "Pass")
-        XCTAssert(UIColor.blackColor() == Color(hexString: "0x000"), "Pass")
-        XCTAssert(UIColor.blackColor() == Color(hexString: "000000"), "Pass")
-        XCTAssert(UIColor.blackColor() == Color(hexString: "#000000"), "Pass")
-        XCTAssert(UIColor.blackColor() == Color(hexString: "0x000000"), "Pass")
-        
         XCTAssert(color == Color(hexString: "4DA2D9CC"), "Pass")
         XCTAssert(color == Color(hexString: "#4DA2D9CC"), "Pass")
         XCTAssert(color == Color(hexString: "0x4DA2D9CC"), "Pass")
-                
+        
         XCTAssert(color == Color(hexString: "0x4DA2D9", alpha: 0.8), "Pass")
     }
     
     func testHexIntInit() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.blackColor() == Color(hexInt: 0x000), "Pass")
-        XCTAssert(UIColor.blackColor() == Color(hexInt: 0x000000), "Pass")
-        
         XCTAssert(color == Color(hexInt: 0x4DA2D9CC), "Pass")
         
         XCTAssert(color == Color(hexInt: 0x4DA2D9, alpha: 0.8), "Pass")
     }
     
-    func testModifyFunc() {
-        // This is an example of a functional test case.
-        XCTAssert(Color(hexInt: 0x000).red(255) == Color.red, "Pass")
-        XCTAssert(Color(hexInt: 0x000).green(255) == Color.green, "Pass")
-        XCTAssert(Color(hexInt: 0x000).blue(255) == Color.blue, "Pass")
-        XCTAssert(Color(hexInt: 0x4DA2D9).alpha(0.8) == color, "Pass")
-    }
-    
     func testStringShort() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.blackColor() == "0x000".color, "Pass")
-        
         XCTAssert(color == "0x4DA2D9CC".color, "Pass")
-    
+        
     }
     
     func testIntShort() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.blackColor() == (0x000).color, "Pass")
-        
         XCTAssert(color == (0x4DA2D9CC).color, "Pass")
         
     }
@@ -88,6 +66,5 @@ class SwiftColorsTests: XCTestCase {
         var space = CGColorGetColorSpace(color.CGColor)
         println("color space \(space)")
     }
-    
     
 }
