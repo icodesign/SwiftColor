@@ -1,4 +1,4 @@
-A Swift Extension for UIColor.
+A Swift Extension for UIColor supporting iOS and Mac.
 
 ## Installation
 
@@ -78,10 +78,14 @@ var alphaColor = Color(hexInt: 0x4DA2D9).alpha(0.8)
 
 #### Equal Operator
 
+> Be careful with color space when developing Mac apps. `SwiftColor` uses `NSCustomColorSpace`.
+
 ```
+// works for both iOS and Mac
 let color1 = UIColor(red: 77/255.0, green: 162/255.0, blue: 217/255.0, alpha: 0.8)
 color1 == Color(hexString: "0x4DA2D9CC")  // true
 
+// only works for iOS
 let color2 = UIColor.blackColor
 color2 == "000".color  // true
 color2 == "000C".color  // false
