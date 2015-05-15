@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B07C63B1B058D01003A8675"
-               BuildableName = "SwiftColor-Mac.framework"
+               BlueprintIdentifier = "9B07C65E1B058ED4003A8675"
+               BuildableName = "SwiftColor.framework"
                BlueprintName = "SwiftColor-Mac"
                ReferencedContainer = "container:SwiftColor.xcodeproj">
             </BuildableReference>
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B07C6451B058D01003A8675"
+               BlueprintIdentifier = "9B07C6681B058ED4003A8675"
                BuildableName = "SwiftColor-MacTests.xctest"
                BlueprintName = "SwiftColor-MacTests"
                ReferencedContainer = "container:SwiftColor.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9B07C6451B058D01003A8675"
+               BlueprintIdentifier = "9B07C6681B058ED4003A8675"
                BuildableName = "SwiftColor-MacTests.xctest"
                BlueprintName = "SwiftColor-MacTests"
                ReferencedContainer = "container:SwiftColor.xcodeproj">
@@ -56,8 +56,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B07C63B1B058D01003A8675"
-            BuildableName = "SwiftColor-Mac.framework"
+            BlueprintIdentifier = "9B07C65E1B058ED4003A8675"
+            BuildableName = "SwiftColor.framework"
             BlueprintName = "SwiftColor-Mac"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>
@@ -75,8 +75,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B07C63B1B058D01003A8675"
-            BuildableName = "SwiftColor-Mac.framework"
+            BlueprintIdentifier = "9B07C65E1B058ED4003A8675"
+            BuildableName = "SwiftColor.framework"
             BlueprintName = "SwiftColor-Mac"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>
@@ -93,8 +93,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9B07C63B1B058D01003A8675"
-            BuildableName = "SwiftColor-Mac.framework"
+            BlueprintIdentifier = "9B07C65E1B058ED4003A8675"
+            BuildableName = "SwiftColor.framework"
             BlueprintName = "SwiftColor-Mac"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>

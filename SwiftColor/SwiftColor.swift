@@ -37,8 +37,6 @@ public extension Color {
             hexString = NSString(format: "%04X", hexInt)
         }else if hexInt <= 0xffffff {
             hexString = NSString(format: "%06X", hexInt)
-        }else if hexInt <= 0xffffffff {
-            hexString = NSString(format: "%08X", hexInt)
         }
         self.init(hexString: hexString as String, alpha: alpha)
     }
