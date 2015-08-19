@@ -261,8 +261,6 @@
 		9BDF39351AC441EE00F0E330 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = TouchingApp;
 				TargetAttributes = {
@@ -626,7 +624,6 @@
 				9B07C6741B058ED4003A8675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9B07C6751B058ED4003A8675 /* Build configuration list for PBXNativeTarget "SwiftColor-MacTests" */ = {
 			isa = XCConfigurationList;
@@ -635,7 +632,6 @@
 				9B07C6771B058ED4003A8675 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		9BDF39381AC441EE00F0E330 /* Build configuration list for PBXProject "SwiftColor" */ = {
 			isa = XCConfigurationList;
