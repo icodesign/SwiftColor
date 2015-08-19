@@ -15,8 +15,8 @@
 #endif
 
 public func ==(lhs: Color, rhs: Color) -> Bool{
-    var (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
-    var (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
+    let (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
+    let (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
     return fabsf(Float(lRed - rRed)) < FLT_EPSILON
         && fabsf(Float(lGreen - rGreen)) < FLT_EPSILON
         && fabsf(Float(lBlue - rBlue)) < FLT_EPSILON
@@ -60,7 +60,7 @@ public extension Color {
         }
         var hexValue: UInt64 = 0
         scanner.scanHexLongLong(&hexValue)
-        switch count(hexString) - minusLength {
+        switch hexString.characters.count - minusLength {
         case 3:
             red = CGFloat((hexValue & 0xF00) >> 8) / 15.0
             green = CGFloat((hexValue & 0x0F0) >> 4) / 15.0
@@ -86,22 +86,22 @@ public extension Color {
     }
     
     public func alpha(value: Float) -> Color {
-        var (red, green, blue, alpha) = colorComponents()
+        let (red, green, blue, _) = colorComponents()
         return Color(red: red, green: green, blue: blue, alpha: CGFloat(value))
     }
     
     public func red(value: Int) -> Color {
-        var (red, green, blue, alpha) = colorComponents()
+        let (_, green, blue, alpha) = colorComponents()
         return Color(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
     }
     
     public func green(value: Int) -> Color {
-        var (red, green, blue, alpha) = colorComponents()
+        let (red, _, blue, alpha) = colorComponents()
         return Color(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
     }
     
     public func blue(value: Int) -> Color {
-        var (red, green, blue, alpha) = colorComponents()
+        let (red, green, _, alpha) = colorComponents()
         return Color(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
     }
     
