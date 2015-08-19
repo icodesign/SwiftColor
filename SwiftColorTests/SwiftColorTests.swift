@@ -80,13 +80,13 @@ class SwiftColorsTests: XCTestCase {
         var num = CGColorGetNumberOfComponents(color.CGColor)
         var colorComponents = CGColorGetComponents(color.CGColor)
         for i in 0..<num {
-            print("color components \(i): \(colorComponents[i])")
+            println("color components \(i): \(colorComponents[i])")
         }
     }
     
     func getColorSpace(color: Color){
         var space = CGColorGetColorSpace(color.CGColor)
-        print("color space \(space)")
+        println("color space \(space)")
     }
     
     
