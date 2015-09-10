@@ -55,16 +55,16 @@ class SwiftColor_MacTests: XCTestCase {
     
     
     func getComponents(color: Color){
-        var num = CGColorGetNumberOfComponents(color.CGColor)
-        var colorComponents = CGColorGetComponents(color.CGColor)
+        let num = CGColorGetNumberOfComponents(color.CGColor)
+        let colorComponents = CGColorGetComponents(color.CGColor)
         for i in 0..<num {
-            println("color components \(i): \(colorComponents[i])")
+            print("color components \(i): \(colorComponents[i])")
         }
     }
     
     func getColorSpace(color: Color){
-        var space = CGColorGetColorSpace(color.CGColor)
-        println("color space \(space)")
+        let space = CGColorGetColorSpace(color.CGColor)
+        print("color space \(space)")
     }
     
 }
