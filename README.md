@@ -91,7 +91,11 @@ color2 == "000".color  // true
 color2 == "000C".color  // false
 ```
 
+#### Convert to image
 
+```
+let image = "000".color.toImage()
+```
 
 
 
