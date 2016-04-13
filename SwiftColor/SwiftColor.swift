@@ -200,3 +200,16 @@ public extension Int {
     
 }
 
+public extension Color {
+    
+    func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+        let rect = CGRectMake(0, 0, size.width, size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        self.setFill()
+        UIRectFill(rect)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
+}
