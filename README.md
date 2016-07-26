@@ -63,6 +63,12 @@ Color(hexInt: 0x4DA2D9, alpha: 0.8)
 (0x4DA2D9).color
 ```
 
+#### Int Byte Init
+
+```swift
+Color(byteRed: 77, green: 162, blue: 217, alpha: 0.8)
+```
+
 #### Get/Change Color Components
 
 ```swift

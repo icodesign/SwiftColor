@@ -85,6 +85,11 @@ public extension Color {
         self.init(red: red, green: green, blue: blue, alpha: mAlpha)
     }
     
+    /// color components value between 0 to 255
+    public convenience init(byteRed red: Int, green: Int, blue: Int, alpha: Float = 1.0) {
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
+    }
+    
     public func alpha(value: Float) -> Color {
         let (red, green, blue, _) = colorComponents()
         return Color(red: red, green: green, blue: blue, alpha: CGFloat(value))

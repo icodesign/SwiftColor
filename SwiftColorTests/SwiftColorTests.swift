@@ -75,6 +75,9 @@ class SwiftColorsTests: XCTestCase {
         
     }
     
+    func testByteColor() {
+        XCTAssert(Color(byteRed: 77, green: 162, blue: 217, alpha: 0.8) == color, "Pass")
+    }
     
     func getComponents(color: Color){
         var num = CGColorGetNumberOfComponents(color.CGColor)
