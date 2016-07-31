@@ -6,8 +6,6 @@ A Swift Extension for UIColor supporting iOS and Mac.
 
 ### CocoaPods
 
-CocoaPods 0.36 adds supports for Swift and embedded frameworks. 
-
 Add ```pod 'SwiftColor'``` to your ```Podfile```: 
 
 ```
