@@ -212,7 +212,7 @@ public extension Color {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         self.setFill()
         UIRectFill(rect)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         return image
     }
