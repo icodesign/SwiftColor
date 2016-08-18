@@ -78,17 +78,17 @@ class SwiftColorsTests: XCTestCase {
     func testByteColor() {
         XCTAssert(Color(byteRed: 77, green: 162, blue: 217, alpha: 0.8) == color, "Pass")
     }
-    
+
     func getComponents(color: Color){
-        var num = CGColorGetNumberOfComponents(color.CGColor)
-        var colorComponents = CGColorGetComponents(color.CGColor)
+        let num = CGColorGetNumberOfComponents(color.CGColor)
+        let colorComponents = CGColorGetComponents(color.CGColor)
         for i in 0..<num {
             print("color components \(i): \(colorComponents[i])")
         }
     }
     
     func getColorSpace(color: Color){
-        var space = CGColorGetColorSpace(color.CGColor)
+        let space = CGColorGetColorSpace(color.CGColor)
         print("color space \(space)")
     }
     

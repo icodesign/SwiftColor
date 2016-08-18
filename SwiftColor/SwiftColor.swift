@@ -9,9 +9,11 @@
 #if os(iOS)
     import UIKit
     public typealias Color = UIColor
+    public typealias Image = UIImage
 #elseif os(OSX)
     import Cocoa
     public typealias Color = NSColor
+    public typealias Image = NSImage
 #endif
 
 public func ==(lhs: Color, rhs: Color) -> Bool{
@@ -207,14 +209,22 @@ public extension Int {
 
 public extension Color {
     
-    public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
-        let rect = CGRectMake(0, 0, size.width, size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        self.setFill()
-        UIRectFill(rect)
-        let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
+    public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> Image? {
+        #if os(iOS)
+            let rect = CGRectMake(0, 0, size.width, size.height)
+            UIGraphicsBeginImageContextWithOptions(size, false, 0)
+            self.setFill()
+            UIRectFill(rect)
+            let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return image
+        #elseif os(OSX)
+            let image = NSImage(size: size)
+            image.lockFocus()
+            drawSwatchInRect(NSMakeRect(0, 0, size.width, size.height))
+            image.unlockFocus()
+            return image
+        #endif
     }
     
 }
