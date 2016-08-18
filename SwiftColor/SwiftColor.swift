@@ -50,7 +50,7 @@ public extension Color {
         var mAlpha: CGFloat = CGFloat(alpha)
         var minusLength = 0
         
-        let scanner = NSScanner(string: hexString)
+        let scanner = Scanner(string: hexString)
         
         if hexString.hasPrefix("#") {
             scanner.scanLocation = 1
@@ -61,7 +61,7 @@ public extension Color {
             minusLength = 2
         }
         var hexValue: UInt64 = 0
-        scanner.scanHexLongLong(&hexValue)
+        scanner.scanHexInt64(&hexValue)
         switch hexString.characters.count - minusLength {
         case 3:
             red = CGFloat((hexValue & 0xF00) >> 8) / 15.0
@@ -92,22 +92,22 @@ public extension Color {
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
     }
     
-    public func alpha(value: Float) -> Color {
+    public func alpha(_ value: Float) -> Color {
         let (red, green, blue, _) = colorComponents()
         return Color(red: red, green: green, blue: blue, alpha: CGFloat(value))
     }
     
-    public func red(value: Int) -> Color {
+    public func red(_ value: Int) -> Color {
         let (_, green, blue, alpha) = colorComponents()
         return Color(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
     }
     
-    public func green(value: Int) -> Color {
+    public func green(_ value: Int) -> Color {
         let (red, _, blue, alpha) = colorComponents()
         return Color(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
     }
     
-    public func blue(value: Int) -> Color {
+    public func blue(_ value: Int) -> Color {
         let (red, green, _, alpha) = colorComponents()
         return Color(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
     }
@@ -130,63 +130,63 @@ public extension Color {
 public extension Color {
     
     public class var black: Color {
-        return self.blackColor()
+        return self.black
     }
     
     public class var darkGray: Color {
-        return self.darkGrayColor()
+        return self.darkGray
     }
     
     public class var lightGray: Color {
-        return self.lightGrayColor()
+        return self.lightGray
     }
     
     public class var white: Color {
-        return self.whiteColor()
+        return self.white
     }
     
     public class var gray: Color {
-        return self.grayColor()
+        return self.gray
     }
     
     public class var red: Color {
-        return self.redColor()
+        return self.red
     }
     
     public class var green: Color {
-        return self.greenColor()
+        return self.green
     }
     
     public class var blue: Color {
-        return self.blueColor()
+        return self.blue
     }
     
     public class var cyan: Color {
-        return self.cyanColor()
+        return self.cyan
     }
     
     public class var yellow: Color {
-        return self.yellowColor()
+        return self.yellow
     }
     
     public class var magenta: Color {
-        return self.magentaColor()
+        return self.magenta
     }
     
     public class var orange: Color {
-        return self.orangeColor()
+        return self.orange
     }
     
     public class var purple: Color {
-        return self.purpleColor()
+        return self.purple
     }
     
     public class var brown: Color {
-        return self.brownColor()
+        return self.brown
     }
     
     public class var clear: Color {
-        return self.clearColor()
+        return self.clear
     }
     
 }
