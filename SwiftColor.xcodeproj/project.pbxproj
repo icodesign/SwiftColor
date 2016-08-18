@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B07C66A1B058ED4003A8675 /* SwiftColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07C65F1B058ED4003A8675 /* SwiftColor.framework */; };
-		9B07C67B1B058F04003A8675 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B07C6791B058F04003A8675 /* Info.plist */; };
 		9B07C67C1B058F04003A8675 /* SwiftColor-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B07C67A1B058F04003A8675 /* SwiftColor-Mac.h */; };
-		9B07C6801B058F0B003A8675 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B07C67E1B058F0B003A8675 /* Info.plist */; };
 		9B07C6811B058F0B003A8675 /* SwiftColor_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07C67F1B058F0B003A8675 /* SwiftColor_MacTests.swift */; };
 		9B07C6821B058F55003A8675 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
 		9BDF39441AC441EE00F0E330 /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -263,7 +261,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = TouchingApp;
 				TargetAttributes = {
 					9B07C65E1B058ED4003A8675 = {
@@ -274,6 +272,7 @@
 					};
 					9BDF393D1AC441EE00F0E330 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0800;
 					};
 					9BDF39481AC441EE00F0E330 = {
 						CreatedOnToolsVersion = 6.3;
@@ -305,7 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07C67B1B058F04003A8675 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +311,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07C6801B058F0B003A8675 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,9 +397,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColor;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -419,9 +418,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColor;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -441,8 +442,10 @@
 				INFOPLIST_FILE = "SwiftColor-MacTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -457,8 +460,10 @@
 				INFOPLIST_FILE = "SwiftColor-MacTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -475,8 +480,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -484,6 +491,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -523,8 +531,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -544,6 +554,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -555,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -563,9 +575,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColor;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -573,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -581,8 +596,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColor;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -599,7 +616,9 @@
 				);
 				INFOPLIST_FILE = SwiftColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColorTests;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -612,7 +631,9 @@
 				);
 				INFOPLIST_FILE = SwiftColorTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColorTests;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
