@@ -2,7 +2,7 @@ osx_image: xcode8
 language: objective-c
 
 script:
-- xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-iOSTests -destination "OS=10.0,name=iPhone 6S"
-- xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-iOS -sdk iphonesimulator
-- xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-MacTests -destination "arch=x86_64"
-- xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-Mac -sdk iphonesimulator
+- xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-iOSTests -sdk iphonesimulator10.0 -destination "OS=10.0,name=iPhone 6S"
+- xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-iOS -sdk iphonesimulator10.0
+- xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-MacTests -sdk macosx10.12 -destination "arch=x86_64"
+- xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-Mac -sdk macosx10.12
