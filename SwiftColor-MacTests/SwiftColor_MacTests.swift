@@ -50,21 +50,8 @@ class SwiftColor_MacTests: XCTestCase {
     func testIntShort() {
         // This is an example of a functional test case.
         XCTAssert(color == (0x4DA2D9CC).color, "Pass")
-        
+
     }
-    
-    
-    func getComponents(color: Color){
-        let num = CGColorGetNumberOfComponents(color.CGColor)
-        let colorComponents = CGColorGetComponents(color.CGColor)
-        for i in 0..<num {
-            print("color components \(i): \(colorComponents[i])")
-        }
-    }
-    
-    func getColorSpace(color: Color){
-        let space = CGColorGetColorSpace(color.CGColor)
-        print("color space \(space)")
-    }
+
     
 }

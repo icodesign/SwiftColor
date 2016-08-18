@@ -120,73 +120,9 @@ public extension Color {
         #if os(iOS)
             self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #elseif os(OSX)
-            self.colorUsingColorSpaceName(NSCalibratedRGBColorSpace)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+            self.usingColorSpaceName(NSCalibratedRGBColorSpace)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #endif
         return (red, green, blue, alpha)
-    }
-    
-}
-
-public extension Color {
-    
-    public class var black: Color {
-        return self.black
-    }
-    
-    public class var darkGray: Color {
-        return self.darkGray
-    }
-    
-    public class var lightGray: Color {
-        return self.lightGray
-    }
-    
-    public class var white: Color {
-        return self.white
-    }
-    
-    public class var gray: Color {
-        return self.gray
-    }
-    
-    public class var red: Color {
-        return self.red
-    }
-    
-    public class var green: Color {
-        return self.green
-    }
-    
-    public class var blue: Color {
-        return self.blue
-    }
-    
-    public class var cyan: Color {
-        return self.cyan
-    }
-    
-    public class var yellow: Color {
-        return self.yellow
-    }
-    
-    public class var magenta: Color {
-        return self.magenta
-    }
-    
-    public class var orange: Color {
-        return self.orange
-    }
-    
-    public class var purple: Color {
-        return self.purple
-    }
-    
-    public class var brown: Color {
-        return self.brown
-    }
-    
-    public class var clear: Color {
-        return self.clear
     }
     
 }
@@ -211,7 +147,7 @@ public extension Color {
     
     public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> Image? {
         #if os(iOS)
-            let rect = CGRectMake(0, 0, size.width, size.height)
+            let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             UIGraphicsBeginImageContextWithOptions(size, false, 0)
             self.setFill()
             UIRectFill(rect)
@@ -221,7 +157,7 @@ public extension Color {
         #elseif os(OSX)
             let image = NSImage(size: size)
             image.lockFocus()
-            drawSwatchInRect(NSMakeRect(0, 0, size.width, size.height))
+            drawSwatch(in: NSMakeRect(0, 0, size.width, size.height))
             image.unlockFocus()
             return image
         #endif
