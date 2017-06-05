@@ -19,10 +19,10 @@
 public func ==(lhs: Color, rhs: Color) -> Bool{
     let (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
     let (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
-    return fabsf(Float(lRed - rRed)) < FLT_EPSILON
-        && fabsf(Float(lGreen - rGreen)) < FLT_EPSILON
-        && fabsf(Float(lBlue - rBlue)) < FLT_EPSILON
-        && fabsf(Float(lAlpha - rAlpha)) < FLT_EPSILON
+    return fabsf(Float(lRed - rRed)) < .ulpOfOne
+        && fabsf(Float(lGreen - rGreen)) < .ulpOfOne
+        && fabsf(Float(lBlue - rBlue)) < .ulpOfOne
+        && fabsf(Float(lAlpha - rAlpha)) < .ulpOfOne
 }
 
 public extension Color {
