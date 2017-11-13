@@ -21,7 +21,7 @@ pod 'SwiftColor'
 To integrate ```SwiftColor``` into your Xcode project using Carthage, specify it in your ```Cartfile```:
 
 ```
-github "iCodesign/SwiftColor"
+github "icodesign/SwiftColor"
 ```
 
 ### Manually
