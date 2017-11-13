@@ -19,10 +19,10 @@
 public func ==(lhs: Color, rhs: Color) -> Bool{
     let (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
     let (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
-    return fabsf(Float(lRed - rRed)) < FLT_EPSILON
-        && fabsf(Float(lGreen - rGreen)) < FLT_EPSILON
-        && fabsf(Float(lBlue - rBlue)) < FLT_EPSILON
-        && fabsf(Float(lAlpha - rAlpha)) < FLT_EPSILON
+    return fabsf(Float(lRed - rRed)) < .ulpOfOne
+        && fabsf(Float(lGreen - rGreen)) < .ulpOfOne
+        && fabsf(Float(lBlue - rBlue)) < .ulpOfOne
+        && fabsf(Float(lAlpha - rAlpha)) < .ulpOfOne
 }
 
 public extension Color {
@@ -62,7 +62,7 @@ public extension Color {
         }
         var hexValue: UInt64 = 0
         scanner.scanHexInt64(&hexValue)
-        switch hexString.characters.count - minusLength {
+        switch hexString.count - minusLength {
         case 3:
             red = CGFloat((hexValue & 0xF00) >> 8) / 15.0
             green = CGFloat((hexValue & 0x0F0) >> 4) / 15.0
@@ -120,7 +120,7 @@ public extension Color {
         #if os(iOS)
             self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #elseif os(OSX)
-            self.usingColorSpaceName(NSCalibratedRGBColorSpace)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+            self.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #endif
         return (red, green, blue, alpha)
     }
