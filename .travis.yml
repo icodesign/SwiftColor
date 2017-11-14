@@ -1,0 +1,8 @@
+osx_image: xcode9.1
+language: objective-c
+
+script:
+- xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-iOSTests -sdk iphonesimulator11.1 -destination "OS=11.1,name=iPhone X"
+- xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-iOS -sdk iphonesimulator11
+- xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-MacTests -sdk macosx10.13 -destination "arch=x86_64"
+- xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-Mac -sdk macosx10.13
