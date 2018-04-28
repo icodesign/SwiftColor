@@ -10,10 +10,18 @@ import UIKit
 import XCTest
 import SwiftColor
 
+private func ==(lhs: Color, rhs: Color) -> Bool {
+    let (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
+    let (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
+    return fabsf(Float(lRed - rRed)) < .ulpOfOne
+        && fabsf(Float(lGreen - rGreen)) < .ulpOfOne
+        && fabsf(Float(lBlue - rBlue)) < .ulpOfOne
+        && fabsf(Float(lAlpha - rAlpha)) < .ulpOfOne
+}
+
 class SwiftColorsTests: XCTestCase {
     
     let color = UIColor(red: 77/255.0, green: 162/255.0, blue: 217/255.0, alpha: 0.8)
-
     
     override func setUp() {
         super.setUp()
@@ -43,12 +51,12 @@ class SwiftColorsTests: XCTestCase {
     
     func testHexIntInit() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.black == Color(hexInt: 0x000), "Pass")
         XCTAssert(UIColor.black == Color(hexInt: 0x000000), "Pass")
-        
-        XCTAssert(color == Color(hexInt: 0x4DA2D9CC), "Pass")
-        
+
         XCTAssert(color == Color(hexInt: 0x4DA2D9, alpha: 0.8), "Pass")
+
+        let color1 = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
+        XCTAssert(color1 == Color(hexInt: 0x007AFF), "Pass")
     }
     
     func testModifyFunc() {
