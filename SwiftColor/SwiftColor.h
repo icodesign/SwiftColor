@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #elif TARGET_OS_MAC
 #import <Cocoa/Cocoa.h>
-#else
+#end
 
 //! Project version number for SwiftColors.
 FOUNDATION_EXPORT double SwiftColorsVersionNumber;
