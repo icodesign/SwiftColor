@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 TouchingApp. All rights reserved.
 //
 
+#if TARGET_IPHONE_SIMULATOR ||
 #import <UIKit/UIKit.h>
+#elif TARGET_OS_MAC
+#import <Cocoa/Cocoa.h>
+#else
 
 //! Project version number for SwiftColors.
 FOUNDATION_EXPORT double SwiftColorsVersionNumber;

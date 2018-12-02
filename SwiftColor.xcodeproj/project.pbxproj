@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9B07C66A1B058ED4003A8675 /* SwiftColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07C65F1B058ED4003A8675 /* SwiftColor.framework */; };
-		9B07C67C1B058F04003A8675 /* SwiftColor-Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B07C67A1B058F04003A8675 /* SwiftColor-Mac.h */; };
 		9B07C6811B058F0B003A8675 /* SwiftColor_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07C67F1B058F0B003A8675 /* SwiftColor_MacTests.swift */; };
 		9B07C6821B058F55003A8675 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
 		9BDF39441AC441EE00F0E330 /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,7 +37,6 @@
 		9B07C65F1B058ED4003A8675 /* SwiftColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07C6691B058ED4003A8675 /* SwiftColor-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftColor-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07C6791B058F04003A8675 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B07C67A1B058F04003A8675 /* SwiftColor-Mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftColor-Mac.h"; sourceTree = "<group>"; };
 		9B07C67E1B058F0B003A8675 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B07C67F1B058F0B003A8675 /* SwiftColor_MacTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColor_MacTests.swift; sourceTree = "<group>"; };
 		9BDF393E1AC441EE00F0E330 /* SwiftColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				9B07C6791B058F04003A8675 /* Info.plist */,
-				9B07C67A1B058F04003A8675 /* SwiftColor-Mac.h */,
 			);
 			path = "SwiftColor-Mac";
 			sourceTree = "<group>";
@@ -166,7 +163,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07C67C1B058F04003A8675 /* SwiftColor-Mac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
