@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 TouchingApp. All rights reserved.
 //
 
-#if TARGET_IPHONE_SIMULATOR ||
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #import <UIKit/UIKit.h>
 #elif TARGET_OS_MAC
 #import <Cocoa/Cocoa.h>
