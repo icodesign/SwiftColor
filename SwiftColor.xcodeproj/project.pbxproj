@@ -264,11 +264,11 @@
 				TargetAttributes = {
 					9B07C65E1B058ED4003A8675 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = "";
 					};
 					9B07C6681B058ED4003A8675 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = 0910;
+						LastSwiftMigration = "";
 					};
 					9BDF393D1AC441EE00F0E330 = {
 						CreatedOnToolsVersion = 6.3;
@@ -402,8 +402,7 @@
 				PRODUCT_NAME = SwiftColor;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -424,8 +423,7 @@
 				PRODUCT_NAME = SwiftColor;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -448,8 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -467,8 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -597,7 +593,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -618,7 +614,7 @@
 				PRODUCT_NAME = SwiftColor;
 				SKIP_INSTALL = YES;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -638,7 +634,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColorTests;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -654,7 +650,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.touchingapp.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColorTests;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
