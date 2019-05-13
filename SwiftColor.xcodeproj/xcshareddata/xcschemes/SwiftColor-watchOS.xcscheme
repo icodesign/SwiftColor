@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9BDF393D1AC441EE00F0E330"
+               BlueprintIdentifier = "AA0BA3FD228902B400DFD67B"
                BuildableName = "SwiftColor.framework"
-               BlueprintName = "SwiftColor-iOS"
+               BlueprintName = "SwiftColor-watchOS"
                ReferencedContainer = "container:SwiftColor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +46,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9BDF393D1AC441EE00F0E330"
+            BlueprintIdentifier = "AA0BA3FD228902B400DFD67B"
             BuildableName = "SwiftColor.framework"
-            BlueprintName = "SwiftColor-iOS"
+            BlueprintName = "SwiftColor-watchOS"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9BDF393D1AC441EE00F0E330"
+            BlueprintIdentifier = "AA0BA3FD228902B400DFD67B"
             BuildableName = "SwiftColor.framework"
-            BlueprintName = "SwiftColor-iOS"
+            BlueprintName = "SwiftColor-watchOS"
             ReferencedContainer = "container:SwiftColor.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

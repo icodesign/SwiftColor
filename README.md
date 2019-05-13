@@ -1,6 +1,7 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![platform](https://img.shields.io/cocoapods/p/SwiftColor.svg)
 [![Build Status](https://travis-ci.org/icodesign/SwiftColor.svg?branch=master)](https://travis-ci.org/icodesign/SwiftColor) 
+[![codecov](https://codecov.io/gh/icodesign/SwiftColor/branch/master/graph/badge.svg)](https://codecov.io/gh/icodesign/SwiftColor)
 
 A Swift Extension for UIColor supporting iOS/watchOS/tvOS and macOS.
 
