@@ -55,7 +55,7 @@ extension Color {
             red = CGFloat((hexValue & 0xF000) >> 12) / 15.0
             green = CGFloat((hexValue & 0x0F00) >> 8) / 15.0
             blue = CGFloat((hexValue & 0x00F0) >> 4) / 15.0
-            mAlpha = CGFloat(hexValue & 0x00F) / 15.0
+            mAlpha = CGFloat(hexValue & 0x000F) / 15.0
         case 6:
             red = CGFloat((hexValue & 0xFF0000) >> 16) / 255.0
             green = CGFloat((hexValue & 0x00FF00) >> 8) / 255.0

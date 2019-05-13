@@ -2,13 +2,13 @@ osx_image: xcode10.2
 language: swift
 
 script:
-  - xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-iOSTests -destination "name=iPhone X"
   - xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-iOS
-  - xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-macOSTests -destination "arch=x86_64"
   - xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-macOS 
-  - xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-watchOS
-  - xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-tvOSTests -destination "name=Apple TV"
   - xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-tvOS
+  - xcodebuild clean build -project SwiftColor.xcodeproj -scheme SwiftColor-watchOS
+  - xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-macOSTests -destination "arch=x86_64"
+  - xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-tvOSTests -destination "name=Apple TV"
+  - xcodebuild test -project SwiftColor.xcodeproj -scheme SwiftColor-iOSTests -destination "name=iPhone X"
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t bdbb49e0-39fe-4fb9-b5cc-30b38f717fbc
+  - bash <(curl -s https://codecov.io/bash) -t bdbb49e0-39fe-4fb9-b5cc-30b38f717fbc -J "SwiftColor-iOSTests"

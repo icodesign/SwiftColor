@@ -35,18 +35,23 @@ class SwiftColorsTests: XCTestCase {
     
     func testHexStringInit() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.black == Color(hexString: "000"), "Pass")
-        XCTAssert(UIColor.black == Color(hexString: "#000"), "Pass")
-        XCTAssert(UIColor.black == Color(hexString: "0x000"), "Pass")
-        XCTAssert(UIColor.black == Color(hexString: "000000"), "Pass")
-        XCTAssert(UIColor.black == Color(hexString: "#000000"), "Pass")
-        XCTAssert(UIColor.black == Color(hexString: "0x000000"), "Pass")
+        XCTAssert(UIColor.black == Color("000"), "Pass")
+        XCTAssert(UIColor.black == Color("#000"), "Pass")
+        XCTAssert(UIColor.black == Color("0x000"), "Pass")
+        XCTAssert(UIColor.black == Color(hexString: "000000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.black == Color(hexString: "#000000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.black == Color(hexString: "0x000000", alpha: 1.0), "Pass")
         
-        XCTAssert(color == Color(hexString: "4DA2D9CC"), "Pass")
+        XCTAssert(color == Color("4DA2D9CC"), "Pass")
         XCTAssert(color == Color(hexString: "#4DA2D9CC"), "Pass")
         XCTAssert(color == Color(hexString: "0x4DA2D9CC"), "Pass")
                 
-        XCTAssert(color == Color(hexString: "0x4DA2D9", alpha: 0.8), "Pass")
+        XCTAssert(color == Color(hexString: "#4DA2D9", alpha: 0.8), "Pass")
+        XCTAssert(UIColor.black == Color(hexString: "0x000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.red.withAlphaComponent(0.5) == Color(hexString: "0xF00", alpha: 0.5), "Pass")
+        XCTAssert(UIColor.red.withAlphaComponent(0.2) == Color(hexString: "0xF003"), "Pass")
+
+        XCTAssert(UIColor(red: 0, green: 0, blue: 0, alpha: 1.0) == Color(hexString: "#AAAAAAA4DA2D9"), "Pass")
     }
     
     func testHexIntInit() {
@@ -86,6 +91,4 @@ class SwiftColorsTests: XCTestCase {
     func testByteColor() {
         XCTAssert(Color(byteRed: 77, green: 162, blue: 217, alpha: 0.8) == color, "Pass")
     }
-    
-    
 }
