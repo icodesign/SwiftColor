@@ -40,6 +40,8 @@ You can also integrate ```SwiftColor``` directly with souce code. Clone the repo
 
 #### Initialize with Hex String
 
+> Supported hex string format: `RGB`, `RGBA`, `[0x|#]RRGGBB`, `[0x|#]RRGGBBAA`
+
 ```swift
 Color("000")
 Color("000C")
@@ -53,6 +55,8 @@ Color(hexString: "#4DA2D9", alpha: 0.8)
 ```
 
 #### Initialize with Hex Int
+
+> Only hex format `0xRRGGBB` is supported
 
 ```swift
 Color(hexInt: 0x4DA2D9)
