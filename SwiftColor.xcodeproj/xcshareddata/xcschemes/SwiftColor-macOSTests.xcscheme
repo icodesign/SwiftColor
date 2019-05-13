@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B07C6681B058ED4003A8675"
-               BuildableName = "SwiftColor-MacTests.xctest"
-               BlueprintName = "SwiftColor-MacTests"
+               BuildableName = "SwiftColorTests.xctest"
+               BlueprintName = "SwiftColor-macOSTests"
                ReferencedContainer = "container:SwiftColor.xcodeproj">
             </BuildableReference>
          </TestableReference>

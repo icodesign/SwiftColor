@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 TouchingApp. All rights reserved.
 //
 
-#if os(iOS)
-    import UIKit
-    public typealias Color = UIColor
-    public typealias Image = UIImage
-#elseif os(OSX)
+#if os(macOS)
     import Cocoa
     public typealias Color = NSColor
     public typealias Image = NSImage
+#else
+    import UIKit
+    public typealias Color = UIColor
+    public typealias Image = UIImage
 #endif
 
 extension Color {
@@ -101,10 +101,10 @@ extension Color {
         var green: CGFloat = 0
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
-        #if os(iOS)
-            self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        #elseif os(OSX)
+        #if os(macOS)
             self.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        #else
+            self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #endif
         return (red, green, blue, alpha)
     }
@@ -130,19 +130,19 @@ extension Int {
 extension Color {
     
     public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> Image? {
-        #if os(iOS)
+        #if os(macOS)
+            let image = NSImage(size: size)
+            image.lockFocus()
+            drawSwatch(in: NSMakeRect(0, 0, size.width, size.height))
+            image.unlockFocus()
+            return image
+        #else
             let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             UIGraphicsBeginImageContextWithOptions(size, false, 0)
             self.setFill()
             UIRectFill(rect)
             let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            return image
-        #elseif os(OSX)
-            let image = NSImage(size: size)
-            image.lockFocus()
-            drawSwatch(in: NSMakeRect(0, 0, size.width, size.height))
-            image.unlockFocus()
             return image
         #endif
     }

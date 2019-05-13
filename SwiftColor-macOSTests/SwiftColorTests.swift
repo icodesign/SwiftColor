@@ -1,6 +1,6 @@
 //
-//  SwiftColor_MacTests.swift
-//  SwiftColor-MacTests
+//  SwiftColorTests.swift
+//  SwiftColorTests
 //
 //  Created by LEI on 5/15/15.
 //  Copyright (c) 2015 TouchingApp. All rights reserved.
