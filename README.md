@@ -1,8 +1,8 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-blue.svg)
+![platform](https://img.shields.io/cocoapods/p/SwiftColor.svg)
 [![Build Status](https://travis-ci.org/icodesign/SwiftColor.svg?branch=master)](https://travis-ci.org/icodesign/SwiftColor) 
 
-A Swift Extension for UIColor supporting iOS and macOS.
+A Swift Extension for UIColor supporting iOS/watchOS/tvOS and macOS.
 
 ## Installation
 
