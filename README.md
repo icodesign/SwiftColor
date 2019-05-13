@@ -2,41 +2,35 @@
 ![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS-blue.svg)
 [![Build Status](https://travis-ci.org/icodesign/SwiftColor.svg?branch=master)](https://travis-ci.org/icodesign/SwiftColor) 
 
-A Swift Extension for UIColor supporting iOS and Mac.
+A Swift Extension for UIColor supporting iOS and macOS.
 
 ## Installation
 
-> Embedded frameworks require a minimum deployment target of iOS 8. 
-
-### CocoaPods
-
-Add ```pod 'SwiftColor'``` to your ```Podfile```: 
-
-```
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
-use_frameworks!
-
-pod 'SwiftColor'
-```
-
 ### Carthage
 
-To integrate ```SwiftColor``` into your Xcode project using Carthage, specify it in your ```Cartfile```:
+Add `SwiftColor` to your `Cartfile`: 
 
 ```
 github "icodesign/SwiftColor"
 ```
 
+### CocoaPods
+
+Add `SwiftColor` to your `Podfile`: 
+
+```
+pod 'SwiftColor'
+```
+
 ### Manually
 
-You can also integrate ```SwiftColor``` directly with souce code. Clone the repo and copy ```SwiftColor.swift``` to your project.
+You can also integrate `SwiftColor` directly with souce code. Just copy `SwiftColor.swift` to your project.
 
 ## Usage
 
 ### Color Init
 
-> ```SwiftColor``` provides a typealias for ```UIColor```/`NSColor` as ```Color```.
+> `SwiftColor` provides a typealias for `UIColor`/`NSColor` as `Color`.
 
 #### Initialize with Hex String
 
@@ -87,6 +81,6 @@ var alphaColor = Color(hexInt: 0x4DA2D9).alpha(0.8)
 
 #### Convert to image
 
-```
+```swift
 let image = "000".color.toImage()
 ```
