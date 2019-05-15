@@ -29,7 +29,7 @@ You can also integrate `SwiftColor` directly with souce code. Just copy `SwiftCo
 
 ## Usage
 
-### Color Init
+### Color Initialization
 
 > `SwiftColor` provides a typealias for `UIColor`/`NSColor` as `Color`.
 
@@ -67,7 +67,7 @@ Color(hexInt: 0x4DA2D9, alpha: 0.8)
 Color(byteRed: 77, green: 162, blue: 217, alpha: 0.8)
 ```
 
-#### Get/Change Color Components
+### Get/Change Color Components
 
 ```swift
 let color = Color(hexString: "#4DA2D9CC")
@@ -80,7 +80,7 @@ var red = "000".color.red(255)
 var alphaColor = Color(hexInt: 0x4DA2D9).alpha(0.8)
 ```
 
-#### Convert to image
+### Convert color to image
 
 ```swift
 let image = "000".color.toImage()
