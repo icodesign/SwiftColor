@@ -2,9 +2,11 @@
 //  SwiftColorTests.swift
 //  SwiftColorTests
 //
-//  Created by LEI on 5/15/15.
-//  Copyright (c) 2015 TouchingApp. All rights reserved.
+//  Created by icodesign on 5/15/15.
+//  Copyright (c) 2015 PotatsoLab. All rights reserved.
 //
+
+#if os(macOS)
 
 import Cocoa
 import XCTest
@@ -55,3 +57,5 @@ class SwiftColor_MacTests: XCTestCase {
 
     
 }
+
+#endif

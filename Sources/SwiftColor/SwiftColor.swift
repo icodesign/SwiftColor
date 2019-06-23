@@ -2,8 +2,8 @@
 //  UIColorExtensions.swift
 //  SwiftColors
 //
-//  Created by LEI on 3/26/15.
-//  Copyright (c) 2015 TouchingApp. All rights reserved.
+//  Created by icodesign on 3/26/15.
+//  Copyright (c) 2015 Potatso Lab. All rights reserved.
 //
 
 #if os(macOS)

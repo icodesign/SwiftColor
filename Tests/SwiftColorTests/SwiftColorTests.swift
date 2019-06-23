@@ -2,9 +2,11 @@
 //  SwiftColorsTests.swift
 //  SwiftColorsTests
 //
-//  Created by LEI on 3/26/15.
-//  Copyright (c) 2015 TouchingApp. All rights reserved.
+//  Created by icodesign on 3/26/15.
+//  Copyright (c) 2015 PotatsoLab. All rights reserved.
 //
+
+#if os(iOS) || os(tvOS)
 
 import UIKit
 import XCTest
@@ -92,3 +94,5 @@ class SwiftColorsTests: XCTestCase {
         XCTAssert(Color(byteRed: 77, green: 162, blue: 217, alpha: 0.8) == color, "Pass")
     }
 }
+
+#endif

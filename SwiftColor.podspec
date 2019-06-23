@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/icodesign/SwiftColor.git", :tag => s.version }
 
-  s.source_files  = "SwiftColor", "SwiftColor/**/*.{swift}"
+  s.source_files  = "Sources/SwiftColor", "Sources/SwiftColor/**/*.{swift}"
 
   s.ios.deployment_target     = '8.0'
   s.osx.deployment_target     = '10.10'

@@ -8,19 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9B07C66A1B058ED4003A8675 /* SwiftColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B07C65F1B058ED4003A8675 /* SwiftColor.framework */; };
-		9B07C6811B058F0B003A8675 /* SwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07C67F1B058F0B003A8675 /* SwiftColorTests.swift */; };
-		9B07C6821B058F55003A8675 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
-		9BDF39441AC441EE00F0E330 /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9BDF394A1AC441EE00F0E330 /* SwiftColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BDF393E1AC441EE00F0E330 /* SwiftColor.framework */; };
-		9BDF39511AC441EE00F0E330 /* SwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF39501AC441EE00F0E330 /* SwiftColorTests.swift */; };
-		9BDF395B1AC4422800F0E330 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
-		AA0BA406228902D400DFD67B /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
-		AA0BA407228902D700DFD67B /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA0BA4152289038200DFD67B /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF395A1AC4422800F0E330 /* SwiftColor.swift */; };
-		AA0BA4162289038600DFD67B /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0BA4202289054A00DFD67B /* SwiftColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0BA40D2289037E00DFD67B /* SwiftColor.framework */; };
-		AA0BA4262289055200DFD67B /* SwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF39501AC441EE00F0E330 /* SwiftColorTests.swift */; };
-		AA24521521B423E7008311CB /* SwiftColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BDF39431AC441EE00F0E330 /* SwiftColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA8048F922BE7B2800808367 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8048F822BE7B2800808367 /* SwiftColor.swift */; };
+		AA8048FA22BE7B2800808367 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8048F822BE7B2800808367 /* SwiftColor.swift */; };
+		AA8048FB22BE7B2800808367 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8048F822BE7B2800808367 /* SwiftColor.swift */; };
+		AA8048FC22BE7B2800808367 /* SwiftColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8048F822BE7B2800808367 /* SwiftColor.swift */; };
+		AA80490622BF72D800808367 /* SwiftColorTests-macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80490522BF72D800808367 /* SwiftColorTests-macOS.swift */; };
+		AA80490922BF72F300808367 /* SwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80490722BF72E600808367 /* SwiftColorTests.swift */; };
+		AA80490A22BF72F700808367 /* SwiftColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80490722BF72E600808367 /* SwiftColorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,20 +48,21 @@
 		9B07C6691B058ED4003A8675 /* SwiftColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B07C6791B058F04003A8675 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B07C67E1B058F0B003A8675 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B07C67F1B058F0B003A8675 /* SwiftColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColorTests.swift; sourceTree = "<group>"; };
 		9BDF393E1AC441EE00F0E330 /* SwiftColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BDF39421AC441EE00F0E330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BDF39431AC441EE00F0E330 /* SwiftColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftColor.h; sourceTree = "<group>"; };
 		9BDF39491AC441EE00F0E330 /* SwiftColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDF394F1AC441EE00F0E330 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9BDF39501AC441EE00F0E330 /* SwiftColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftColorTests.swift; sourceTree = "<group>"; };
-		9BDF395A1AC4422800F0E330 /* SwiftColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColor.swift; sourceTree = "<group>"; };
 		AA0BA3FE228902B400DFD67B /* SwiftColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0BA401228902B400DFD67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA0BA40D2289037E00DFD67B /* SwiftColor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftColor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0BA4102289037E00DFD67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA0BA41B2289054900DFD67B /* SwiftColor-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftColor-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0BA41F2289054A00DFD67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA8048F822BE7B2800808367 /* SwiftColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColor.swift; sourceTree = "<group>"; };
+		AA8048FE22BE7B7E00808367 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA80490522BF72D800808367 /* SwiftColorTests-macOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SwiftColorTests-macOS.swift"; path = "Tests/SwiftColorTests/SwiftColorTests-macOS.swift"; sourceTree = SOURCE_ROOT; };
+		AA80490722BF72E600808367 /* SwiftColorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftColorTests.swift; path = Tests/SwiftColorTests/SwiftColorTests.swift; sourceTree = SOURCE_ROOT; };
+		AA80490B22BF736F00808367 /* SwiftColor.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwiftColor.podspec; sourceTree = "<group>"; };
+		AA80490C22BF736F00808367 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +132,8 @@
 		9B07C67D1B058F0B003A8675 /* SwiftColor-macOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				AA80490522BF72D800808367 /* SwiftColorTests-macOS.swift */,
 				9B07C67E1B058F0B003A8675 /* Info.plist */,
-				9B07C67F1B058F0B003A8675 /* SwiftColorTests.swift */,
 			);
 			path = "SwiftColor-macOSTests";
 			sourceTree = "<group>";
@@ -144,7 +141,10 @@
 		9BDF39341AC441EE00F0E330 = {
 			isa = PBXGroup;
 			children = (
-				9BDF39401AC441EE00F0E330 /* SwiftColor */,
+				AA80490C22BF736F00808367 /* Package.swift */,
+				AA80490B22BF736F00808367 /* SwiftColor.podspec */,
+				AA8048F622BE7B2800808367 /* Sources */,
+				AA8048FD22BE7B7E00808367 /* SwiftColor-iOS */,
 				9BDF394D1AC441EE00F0E330 /* SwiftColor-iOSTests */,
 				9B07C6781B058F04003A8675 /* SwiftColor-macOS */,
 				9B07C67D1B058F0B003A8675 /* SwiftColor-macOSTests */,
@@ -169,28 +169,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9BDF39401AC441EE00F0E330 /* SwiftColor */ = {
-			isa = PBXGroup;
-			children = (
-				9BDF39431AC441EE00F0E330 /* SwiftColor.h */,
-				9BDF395A1AC4422800F0E330 /* SwiftColor.swift */,
-				9BDF39411AC441EE00F0E330 /* Supporting Files */,
-			);
-			path = SwiftColor;
-			sourceTree = "<group>";
-		};
-		9BDF39411AC441EE00F0E330 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9BDF39421AC441EE00F0E330 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		9BDF394D1AC441EE00F0E330 /* SwiftColor-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BDF39501AC441EE00F0E330 /* SwiftColorTests.swift */,
+				AA80490722BF72E600808367 /* SwiftColorTests.swift */,
 				9BDF394F1AC441EE00F0E330 /* Info.plist */,
 			);
 			path = "SwiftColor-iOSTests";
@@ -220,6 +202,30 @@
 			path = "SwiftColor-tvOSTests";
 			sourceTree = "<group>";
 		};
+		AA8048F622BE7B2800808367 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA8048F722BE7B2800808367 /* SwiftColor */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AA8048F722BE7B2800808367 /* SwiftColor */ = {
+			isa = PBXGroup;
+			children = (
+				AA8048F822BE7B2800808367 /* SwiftColor.swift */,
+			);
+			path = SwiftColor;
+			sourceTree = "<group>";
+		};
+		AA8048FD22BE7B7E00808367 /* SwiftColor-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AA8048FE22BE7B7E00808367 /* Info.plist */,
+			);
+			path = "SwiftColor-iOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -227,7 +233,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA24521521B423E7008311CB /* SwiftColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +240,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDF39441AC441EE00F0E330 /* SwiftColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +247,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0BA407228902D700DFD67B /* SwiftColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +254,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0BA4162289038600DFD67B /* SwiftColor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +395,7 @@
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = TouchingApp;
+				ORGANIZATIONNAME = "Potatso Lab";
 				TargetAttributes = {
 					9B07C65E1B058ED4003A8675 = {
 						CreatedOnToolsVersion = 6.4;
@@ -401,7 +403,7 @@
 					};
 					9B07C6681B058ED4003A8675 = {
 						CreatedOnToolsVersion = 6.4;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1100;
 					};
 					9BDF393D1AC441EE00F0E330 = {
 						CreatedOnToolsVersion = 6.3;
@@ -509,7 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07C6821B058F55003A8675 /* SwiftColor.swift in Sources */,
+				AA8048FA22BE7B2800808367 /* SwiftColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,7 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07C6811B058F0B003A8675 /* SwiftColorTests.swift in Sources */,
+				AA80490622BF72D800808367 /* SwiftColorTests-macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDF395B1AC4422800F0E330 /* SwiftColor.swift in Sources */,
+				AA8048F922BE7B2800808367 /* SwiftColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,7 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BDF39511AC441EE00F0E330 /* SwiftColorTests.swift in Sources */,
+				AA80490922BF72F300808367 /* SwiftColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0BA406228902D400DFD67B /* SwiftColor.swift in Sources */,
+				AA8048FB22BE7B2800808367 /* SwiftColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,7 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0BA4152289038200DFD67B /* SwiftColor.swift in Sources */,
+				AA8048FC22BE7B2800808367 /* SwiftColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +559,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0BA4262289055200DFD67B /* SwiftColorTests.swift in Sources */,
+				AA80490A22BF72F700808367 /* SwiftColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +632,8 @@
 		9B07C6761B058ED4003A8675 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -646,12 +650,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.potatsolab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColorTests;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		9B07C6771B058ED4003A8675 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -663,6 +671,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.potatsolab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftColorTests;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -790,7 +799,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftColor/Info.plist;
+				INFOPLIST_FILE = "SwiftColor-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -810,7 +819,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftColor/Info.plist;
+				INFOPLIST_FILE = "SwiftColor-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -823,6 +832,7 @@
 		9BDF39581AC441EE00F0E330 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -842,6 +852,7 @@
 		9BDF39591AC441EE00F0E330 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -989,6 +1000,7 @@
 		AA0BA4242289054A00DFD67B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1016,6 +1028,7 @@
 		AA0BA4252289054A00DFD67B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
