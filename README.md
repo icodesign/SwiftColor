@@ -7,6 +7,12 @@ A Swift Extension for UIColor supporting iOS/watchOS/tvOS and macOS.
 
 ## Installation
 
+### Swift Package Manager
+
+```
+.package(url: "https://github.com/icodesign/SwiftColor.git", from: "1.5.0")
+```
+
 ### Carthage
 
 Add `SwiftColor` to your `Cartfile`: 
