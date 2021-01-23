@@ -1,0 +1,27 @@
+name: ci
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build SwiftColor-iOS
+      run: xcodebuild -scheme SwiftColor-iOS -destination generic/platform=iOS -configuration Release | xcpretty -s
+    - name: Build SwiftColor-macOS
+      run: xcodebuild -scheme SwiftColor-macOS -destination generic/platform=macOS -configuration Release | xcpretty -s
+    - name: Build SwiftColor-watchOS
+      run: xcodebuild -scheme SwiftColor-watchOS -destination generic/platform=watchOS -configuration Release | xcpretty -s
+    - name: Build SwiftColor-tvOS
+      run: xcodebuild -scheme wiftColor-tvOS -destination generic/platform=tvOS -configuration Release | xcpretty -s
+    - name: Swift Build
+      run: swift build -v
+    - name: Swift Test
+      run: swift test -v
