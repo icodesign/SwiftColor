@@ -6,10 +6,10 @@ import PackageDescription
 let package = Package(
     name: "SwiftColor",
     platforms: [
-       .macOS("10.10"),
-       .iOS("9.0"),
-       .watchOS("2.0"),
-       .tvOS("9.0")
+       .macOS("10.15"),
+       .iOS("13.0"),
+       .watchOS("5.0"),
+       .tvOS("13.0")
     ],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
