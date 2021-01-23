@@ -29,18 +29,18 @@ class SwiftColor_MacTests: XCTestCase {
     
     func testHexStringInit() {
         // This is an example of a functional test case.
-        XCTAssert(color == Color(hexString: "4DA2D9CC"), "Pass")
-        XCTAssert(color == Color(hexString: "#4DA2D9CC"), "Pass")
-        XCTAssert(color == Color(hexString: "0x4DA2D9CC"), "Pass")
+        XCTAssert(color == NativeColor(hexString: "4DA2D9CC"), "Pass")
+        XCTAssert(color == NativeColor(hexString: "#4DA2D9CC"), "Pass")
+        XCTAssert(color == NativeColor(hexString: "0x4DA2D9CC"), "Pass")
         
-        XCTAssert(color == Color(hexString: "0x4DA2D9", alpha: 0.8), "Pass")
+        XCTAssert(color == NativeColor(hexString: "0x4DA2D9", alpha: 0.8), "Pass")
     }
     
     func testHexIntInit() {
         // This is an example of a functional test case.
-        XCTAssert(color == Color(hexInt: 0x4DA2D9CC), "Pass")
+        XCTAssert(color == NativeColor(hexInt: 0x4DA2D9CC), "Pass")
         
-        XCTAssert(color == Color(hexInt: 0x4DA2D9, alpha: 0.8), "Pass")
+        XCTAssert(color == NativeColor(hexInt: 0x4DA2D9, alpha: 0.8), "Pass")
     }
     
     func testStringShort() {

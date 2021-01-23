@@ -8,15 +8,15 @@
 
 #if os(macOS)
     import Cocoa
-    public typealias Color = NSColor
+    public typealias NativeColor = NSColor
     public typealias Image = NSImage
 #else
     import UIKit
-    public typealias Color = UIColor
+    public typealias NativeColor = UIColor
     public typealias Image = UIImage
 #endif
 
-extension Color {
+extension NativeColor {
     
     public convenience init(_ hexString: String) {
         self.init(hexString: hexString, alpha: 1.0)
@@ -37,11 +37,11 @@ extension Color {
         let scanner = Scanner(string: hexString)
         
         if hexString.hasPrefix("#") {
-            scanner.scanLocation = 1
+            scanner.currentIndex = scanner.string.index(scanner.string.startIndex, offsetBy: "#".count)
             minusLength = 1
         }
         if hexString.hasPrefix("0x") {
-            scanner.scanLocation = 2
+            scanner.currentIndex = scanner.string.index(scanner.string.startIndex, offsetBy: "0x".count)
             minusLength = 2
         }
         var hexValue: UInt64 = 0
@@ -76,24 +76,24 @@ extension Color {
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
     }
     
-    public func alpha(_ value: Float) -> Color {
+    public func alpha(_ value: Float) -> NativeColor {
         let (red, green, blue, _) = colorComponents()
-        return Color(red: red, green: green, blue: blue, alpha: CGFloat(value))
+        return NativeColor(red: red, green: green, blue: blue, alpha: CGFloat(value))
     }
     
-    public func red(_ value: Int) -> Color {
+    public func red(_ value: Int) -> NativeColor {
         let (_, green, blue, alpha) = colorComponents()
-        return Color(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
+        return NativeColor(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
     }
     
-    public func green(_ value: Int) -> Color {
+    public func green(_ value: Int) -> NativeColor {
         let (red, _, blue, alpha) = colorComponents()
-        return Color(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
+        return NativeColor(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
     }
     
-    public func blue(_ value: Int) -> Color {
+    public func blue(_ value: Int) -> NativeColor {
         let (red, green, _, alpha) = colorComponents()
-        return Color(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
+        return NativeColor(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
     }
     
     public func colorComponents() -> (CGFloat, CGFloat, CGFloat, CGFloat) {
@@ -102,7 +102,7 @@ extension Color {
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
         #if os(macOS)
-            self.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+            self.usingColorSpace(.genericRGB)!.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #else
             self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
         #endif
@@ -113,21 +113,21 @@ extension Color {
 
 extension String {
     
-    public var color: Color {
-        return Color(hexString: self)
+    public var color: NativeColor {
+        return NativeColor(hexString: self)
     }
     
 }
 
 extension Int {
     
-    public var color: Color {
-        return Color(hexInt: self)
+    public var color: NativeColor {
+        return NativeColor(hexInt: self)
     }
     
 }
 
-extension Color {
+extension NativeColor {
     
     public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> Image? {
         #if os(macOS)
@@ -148,3 +148,24 @@ extension Color {
     }
     
 }
+
+
+#if canImport(SwiftUI)
+import SwiftUI
+
+extension Color {
+
+    public init(_ hexString: String) {
+        self.init(NativeColor(hexString))
+    }
+
+    public init(hexInt: Int, alpha: Float = 1.0) {
+        self.init(NativeColor(hexInt: hexInt, alpha: alpha))
+    }
+
+    public init(hexString: String, alpha: Float = 1.0) {
+        self.init(NativeColor(hexString: hexString, alpha: alpha))
+    }
+}
+
+#endif
