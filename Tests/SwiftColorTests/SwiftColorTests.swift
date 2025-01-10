@@ -12,7 +12,7 @@ import UIKit
 import XCTest
 import SwiftColor
 
-private func ==(lhs: NativeColor, rhs: NativeColor) -> Bool {
+private func ==(lhs: _NativeColor, rhs: _NativeColor) -> Bool {
     let (lRed, lGreen, lBlue, lAlpha) = lhs.colorComponents()
     let (rRed, rGreen, rBlue, rAlpha) = rhs.colorComponents()
     return fabsf(Float(lRed - rRed)) < .ulpOfOne
@@ -37,41 +37,37 @@ class SwiftColorsTests: XCTestCase {
     
     func testHexStringInit() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.black == NativeColor("000"), "Pass")
-        XCTAssert(UIColor.black == NativeColor("#000"), "Pass")
-        XCTAssert(UIColor.black == NativeColor("0x000"), "Pass")
-        XCTAssert(UIColor.black == NativeColor(hexString: "000000", alpha: 1.0), "Pass")
-        XCTAssert(UIColor.black == NativeColor(hexString: "#000000", alpha: 1.0), "Pass")
-        XCTAssert(UIColor.black == NativeColor(hexString: "0x000000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.black == _NativeColor(hexString: "000000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.black == _NativeColor(hexString: "#000000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.black == _NativeColor(hexString: "0x000000", alpha: 1.0), "Pass")
         
-        XCTAssert(color == NativeColor("4DA2D9CC"), "Pass")
-        XCTAssert(color == NativeColor(hexString: "#4DA2D9CC"), "Pass")
-        XCTAssert(color == NativeColor(hexString: "0x4DA2D9CC"), "Pass")
+        XCTAssert(color == _NativeColor(hexString: "#4DA2D9CC"), "Pass")
+        XCTAssert(color == _NativeColor(hexString: "0x4DA2D9CC"), "Pass")
                 
-        XCTAssert(color == NativeColor(hexString: "#4DA2D9", alpha: 0.8), "Pass")
-        XCTAssert(UIColor.black == NativeColor(hexString: "0x000", alpha: 1.0), "Pass")
-        XCTAssert(UIColor.red.withAlphaComponent(0.5) == NativeColor(hexString: "0xF00", alpha: 0.5), "Pass")
-        XCTAssert(UIColor.red.withAlphaComponent(0.2) == NativeColor(hexString: "0xF003"), "Pass")
+        XCTAssert(color == _NativeColor(hexString: "#4DA2D9", alpha: 0.8), "Pass")
+        XCTAssert(UIColor.black == _NativeColor(hexString: "0x000", alpha: 1.0), "Pass")
+        XCTAssert(UIColor.red.withAlphaComponent(0.5) == _NativeColor(hexString: "0xF00", alpha: 0.5), "Pass")
+        XCTAssert(UIColor.red.withAlphaComponent(0.2) == _NativeColor(hexString: "0xF003"), "Pass")
 
-        XCTAssert(UIColor(red: 0, green: 0, blue: 0, alpha: 1.0) == NativeColor(hexString: "#AAAAAAA4DA2D9"), "Pass")
+        XCTAssert(UIColor(red: 0, green: 0, blue: 0, alpha: 1.0) == _NativeColor(hexString: "#AAAAAAA4DA2D9"), "Pass")
     }
     
     func testHexIntInit() {
         // This is an example of a functional test case.
-        XCTAssert(UIColor.black == NativeColor(hexInt: 0x000000), "Pass")
+        XCTAssert(UIColor.black == _NativeColor(hexInt: 0x000000), "Pass")
 
-        XCTAssert(color == NativeColor(hexInt: 0x4DA2D9, alpha: 0.8), "Pass")
+        XCTAssert(color == _NativeColor(hexInt: 0x4DA2D9, alpha: 0.8), "Pass")
 
         let color1 = UIColor(red: 0/255.0, green: 122/255.0, blue: 255/255.0, alpha: 1.0)
-        XCTAssert(color1 == NativeColor(hexInt: 0x007AFF), "Pass")
+        XCTAssert(color1 == _NativeColor(hexInt: 0x007AFF), "Pass")
     }
     
     func testModifyFunc() {
         // This is an example of a functional test case.
-        XCTAssert(NativeColor(hexInt: 0x000).red(255) == NativeColor.red, "Pass")
-        XCTAssert(NativeColor(hexInt: 0x000).green(255) == NativeColor.green, "Pass")
-        XCTAssert(NativeColor(hexInt: 0x000).blue(255) == NativeColor.blue, "Pass")
-        XCTAssert(NativeColor(hexInt: 0x4DA2D9).alpha(0.8) == color, "Pass")
+        XCTAssert(_NativeColor(hexInt: 0x000).red(255) == _NativeColor.red, "Pass")
+        XCTAssert(_NativeColor(hexInt: 0x000).green(255) == _NativeColor.green, "Pass")
+        XCTAssert(_NativeColor(hexInt: 0x000).blue(255) == _NativeColor.blue, "Pass")
+        XCTAssert(_NativeColor(hexInt: 0x4DA2D9).alpha(0.8) == color, "Pass")
     }
     
     func testStringShort() {
@@ -91,7 +87,7 @@ class SwiftColorsTests: XCTestCase {
     }
     
     func testByteColor() {
-        XCTAssert(NativeColor(byteRed: 77, green: 162, blue: 217, alpha: 0.8) == color, "Pass")
+        XCTAssert(_NativeColor(byteRed: 77, green: 162, blue: 217, alpha: 0.8) == color, "Pass")
     }
 }
 

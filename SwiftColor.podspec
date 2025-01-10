@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftColor"
-  s.version      = "1.6.0"
+  s.version      = "1.7.0"
   s.summary      = "Swift Color Extensions"
   s.homepage     = "https://github.com/icodesign/SwiftColor"
   s.license      = "MIT"

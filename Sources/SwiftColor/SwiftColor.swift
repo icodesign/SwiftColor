@@ -8,19 +8,15 @@
 
 #if os(macOS)
     import Cocoa
-    public typealias NativeColor = NSColor
-    public typealias Image = NSImage
+    public typealias _NativeColor = NSColor
+    public typealias _NativeImage = NSImage
 #else
     import UIKit
-    public typealias NativeColor = UIColor
-    public typealias Image = UIImage
+    public typealias _NativeColor = UIColor
+    public typealias _NativeImage = UIImage
 #endif
 
-extension NativeColor {
-    
-    public convenience init(_ hexString: String) {
-        self.init(hexString: hexString, alpha: 1.0)
-    }
+extension _NativeColor {
     
     public convenience init(hexInt: Int, alpha: Float = 1.0) {
         let hexString = String(format: "%06X", hexInt)
@@ -76,24 +72,24 @@ extension NativeColor {
         self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
     }
     
-    public func alpha(_ value: Float) -> NativeColor {
+    public func alpha(_ value: Float) -> _NativeColor {
         let (red, green, blue, _) = colorComponents()
-        return NativeColor(red: red, green: green, blue: blue, alpha: CGFloat(value))
+        return _NativeColor(red: red, green: green, blue: blue, alpha: CGFloat(value))
     }
     
-    public func red(_ value: Int) -> NativeColor {
+    public func red(_ value: Int) -> _NativeColor {
         let (_, green, blue, alpha) = colorComponents()
-        return NativeColor(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
+        return _NativeColor(red: CGFloat(value)/255.0, green: green, blue: blue, alpha: alpha)
     }
     
-    public func green(_ value: Int) -> NativeColor {
+    public func green(_ value: Int) -> _NativeColor {
         let (red, _, blue, alpha) = colorComponents()
-        return NativeColor(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
+        return _NativeColor(red: red, green: CGFloat(value)/255.0, blue: blue, alpha: alpha)
     }
     
-    public func blue(_ value: Int) -> NativeColor {
+    public func blue(_ value: Int) -> _NativeColor {
         let (red, green, _, alpha) = colorComponents()
-        return NativeColor(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
+        return _NativeColor(red: red, green: green, blue: CGFloat(value)/255.0, alpha: alpha)
     }
     
     public func colorComponents() -> (CGFloat, CGFloat, CGFloat, CGFloat) {
@@ -113,23 +109,23 @@ extension NativeColor {
 
 extension String {
     
-    public var color: NativeColor {
-        return NativeColor(hexString: self)
+    public var color: _NativeColor {
+        return _NativeColor(hexString: self)
     }
     
 }
 
 extension Int {
     
-    public var color: NativeColor {
-        return NativeColor(hexInt: self)
+    public var color: _NativeColor {
+        return _NativeColor(hexInt: self)
     }
     
 }
 
-extension NativeColor {
+extension _NativeColor {
     
-    public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> Image? {
+    public func toImage(size: CGSize = CGSize(width: 1, height: 1)) -> _NativeImage? {
         #if os(macOS)
             let image = NSImage(size: size)
             image.lockFocus()
@@ -155,16 +151,12 @@ import SwiftUI
 
 extension Color {
 
-    public init(_ hexString: String) {
-        self.init(NativeColor(hexString))
-    }
-
     public init(hexInt: Int, alpha: Float = 1.0) {
-        self.init(NativeColor(hexInt: hexInt, alpha: alpha))
+        self.init(_NativeColor(hexInt: hexInt, alpha: alpha))
     }
 
     public init(hexString: String, alpha: Float = 1.0) {
-        self.init(NativeColor(hexString: hexString, alpha: alpha))
+        self.init(_NativeColor(hexString: hexString, alpha: alpha))
     }
 }
 
